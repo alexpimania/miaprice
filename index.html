@@ -10,7 +10,7 @@
               if (password == "bitcoingood"){
               var raiAmount = 604.4;
               var startValue = 247;
-              $.get("https://api.coinmarketcap.com/v1/ticker/raiblocks/?convert=aud", function(data, status) {
+              $.get("https://api.coinmarketcap.com/v1/ticker/nano/?convert=aud", function(data, status) {
                   var price = parseFloat(data[0].price_aud);
                   var totalValue = price * raiAmount;
                   var profit = totalValue-startValue;
@@ -76,7 +76,7 @@
 <body onload="calcStats();">
   <h2 id="title">Mia's Portfolio</h2>
   <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
-  <div id="cmc" class="coinmarketcap-currency-widget" data-currency="raiblocks" data-base="AUD" data-secondary="BTC"></div>
+  <div id="cmc" class="coinmarketcap-currency-widget" data-currency="nano" data-base="AUD" data-secondary="BTC"></div>
   <table id="stats">
     <tbody><tr>
       <th>Total Value</th>
