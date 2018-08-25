@@ -20,8 +20,6 @@
     </script>
     <style>
         h2{
-            position: absolute;
-            top: 100px;
             font-family: sans-serif, "Trebuchet MS", Arial, Helvetica;
             color: #20C20E;
             text-align: center;
@@ -31,11 +29,18 @@
         body {
             background-color: black;
         }
+        #middle
+        {
+            position: absolute;
+            top: 100px;
+        }
    
     </style>
 </head>
 <body onload="calcStats();">
-    <h2>Total Value</h2>
-    <br>
-    <h2 id="totalValue"></h2>
+    <div id="middle">
+        <h2>Total Value</h2>
+        <br>
+        <h2 id="totalValue"></h2>
+    </div>
 </body>
