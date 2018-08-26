@@ -9,12 +9,14 @@
               var password = prompt("Enter password");
               if (password == "mia")
               {
-                  var raiAmount = 604.4;
-                  $.get("https://api.coinmarketcap.com/v1/ticker/nano/?convert=aud", function(data, status) {
-                      var price = parseFloat(data[0].price_aud);
-                      var totalValue = price * raiAmount;
-                      document.getElementById("totalValue").innerText = "$" + totalValue.toFixed(2);
-                  });
+                  setTimeout(function(){
+                      var raiAmount = 604.4;
+                      $.get("https://api.coinmarketcap.com/v1/ticker/nano/?convert=aud", function(data, status) {
+                          var price = parseFloat(data[0].price_aud);
+                          var totalValue = price * raiAmount;
+                          document.getElementById("totalValue").innerText = "$" + totalValue.toFixed(2);
+                      });
+                  }, 4500);
               }
         }
     </script>
@@ -43,6 +45,6 @@
     <div id="middle">
         <h2>Total Value</h2>
         <br>
-        <h2 id="totalValue"></h2>
+        <h2 id="totalValue">Calculating, WAIT MATE!!!!! GEEEEEZ WHAT ARE YOU STARING AT!!?!?! Stop looking!!!</h2>
     </div>
 </body>
